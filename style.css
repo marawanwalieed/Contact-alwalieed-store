@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+
+    --primary:#1877F2;
+
+    --whatsapp:#25D366;
+
+    --call:#0d8b45;
+
+    --location:#F44336;
+
+    --white:#ffffff;
+
+    --glass:rgba(255,255,255,.12);
+
+}
+body{
+
+font-family:'Cairo',sans-serif;
+background:
+linear-gradient(
+135deg,
+#003B73,
+#007991,
+#3F9C95,
+#F29F05);
+
+background-size:400% 400%;
+
+animation:gradient 12s ease infinite;
+    margin:0;
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center; /* توسيط أفقي */
+
+    align-items:center;     /* توسيط رأسي */
+
+    padding:20px;
+
+    font-family:'Cairo',sans-serif;
+
+    background:linear-gradient(135deg,#0d47a1,#1a237e);
+
+}
+
+.container{
+
+    width:100%;
+    max-width:430px;
+
+    text-align:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.2);
+
+backdrop-filter:blur(20px);
+
+-webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.35);
+
+    animation:show .8s ease;
+
+}
+.btn i{
+
+width:30px;
+
+font-size:24px;
+
+}
+.logo{
+
+    width:170px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:20px;
+
+    border:5px solid white;
+
+    box-shadow:
+
+    0 0 30px rgba(255,255,255,.35);
+
+}
+.logo:hover{
+
+transform:rotate(3deg) scale(1.05);
+
+}
+
+h1{
+
+    color:white;
+
+    margin-bottom:10px;
+
+    font-size:32px;
+text-shadow:0 0 10px rgba(0,0,0,.35);
+
+}
+
+p{
+
+     color:#E5E7EB;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    margin-bottom:30px;
+
+
+}
+
+.buttons{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    padding:18px ;
+
+    text-decoration:none;
+
+    color:white;
+
+    border-radius:20px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+transition:
+transform .25s,
+box-shadow .25s,
+background .25s;position:relative;
+
+overflow:hidden;
+}
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.25),
+
+transparent);
+
+transition:.6s;
+
+}
+.btn:hover::before{
+
+left:120%;
+
+}
+.btn i{
+
+    font-size:25px;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+.btn:active{
+
+    transform:scale(.97);
+
+}
+
+.call{
+
+background:var(--call);
+}
+
+.whatsapp{
+
+background:var(--whatsapp);
+}
+
+.facebook{
+
+background:var(--primary);
+}
+
+.location{
+
+background:var(--location);
+}
+
+footer{
+
+    margin-top:30px;
+
+    color:white;
+
+    opacity:.8;
+
+    font-size:14px;
+
+}
+
+@keyframes gradient{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
